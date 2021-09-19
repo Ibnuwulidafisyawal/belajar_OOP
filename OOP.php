@@ -92,7 +92,6 @@ class cetakInfoProduk{
 $produk1 = new komik ("Titan ", "Agung ", "Sunan ",45000,100 ,"Komik ");
 $produk2 = new game ("Resident Evil ", "Saya ", "Aku ",45000,50 ,"Game ");
 
-
 echo $produk1->getInfoProduk();
 echo "<br>";
 echo $produk2->getInfoProduk();
