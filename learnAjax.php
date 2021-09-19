@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +11,6 @@
     <div id="hasil"></div>
 </body>
 </html>
-
-
-
 
 <script>
     // function loadContent(){
