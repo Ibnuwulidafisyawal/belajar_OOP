@@ -22,7 +22,6 @@ class kucing{
 
     function activity(){
         return $this->activity = "bermain<br>";
-        return $this->activity = "bermain<br>";
     }
 }
 
@@ -30,7 +29,6 @@ $kucing = new kucing();
 echo $kucing->namaKucing().$kucing->warnaKucing().$kucing->jenis().$kucing->activity();
 
 echo "<hr>";
-
 
 //studi casus no 2
 class siswa{
@@ -60,9 +58,6 @@ class siswa{
 
 $siswa = new siswa();
 echo $siswa->namaSiswa().$siswa->nis().$siswa->rombel().$siswa->alamat();
-
-
-
 
 ?>
 
