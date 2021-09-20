@@ -25,12 +25,12 @@
     //                     `;
     //             })
     //             document.getElementById("hasil").innerHTML = template.join("<br>");
-
+s
     //         }).catch(function(e){
     //             alert ("Gagal Ngambil Data")
     //         });
     // }
-
+hahah
 
 </script>
 
