@@ -19,7 +19,6 @@
 //     function warna(){
 //         return $this->warna = "Silver<br>";
 //     }
-
 //     function kecepatan(){
 //         return $this->kecepatanMaksimal = "300 km<br>";
 //     }
@@ -30,6 +29,9 @@
 
 // echo "<hr>";
 
+// Ibnu Wulida Fisyawal
+// RPL XI-2
+// 12007825
 class mobilAkuDanDia{
 
     var $nama;

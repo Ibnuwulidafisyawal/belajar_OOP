@@ -65,14 +65,19 @@ $data->form();
 if ($_POST) {
   $xa = $_POST['x'];
   $ya = $_POST['y'];
+
   if ($_POST['operasi'] == "tambah") {
     echo "Hasil Dari ".$xa." + ".$ya." = ".$data->Tambah($xa, $ya)."";
-  } elseif ($_POST['operasi'] == "kali") {
-    echo "Hasil Dari ".$xa." x ".$ya." = ".$data->Kali($xa, $ya)."";
-  } elseif ($_POST['operasi'] == "kurang") {
-    echo "Hasil Dari ".$xa." - ".$ya." = ".$data->Kurang($xa, $ya)."";
-  } elseif ($_POST['operasi'] == "bagi") {
-    echo "Hasil Dari ".$xa." / ".$ya." = ".$data->Bagi($xa, $ya)."";
-  }
+
+        } elseif ($_POST['operasi'] == "kali") {
+            echo "Hasil Dari ".$xa." x ".$ya." = ".$data->Kali($xa, $ya)."";
+            
+        } elseif ($_POST['operasi'] == "kurang") {
+            echo "Hasil Dari ".$xa." - ".$ya." = ".$data->Kurang($xa, $ya)."";
+
+        } elseif ($_POST['operasi'] == "bagi") {
+            echo "Hasil Dari ".$xa." / ".$ya." = ".$data->Bagi($xa, $ya)."";
+        }
 }
+
 ?>

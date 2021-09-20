@@ -11,7 +11,6 @@
     <div id="hasil"></div>
 </body>
 </html>
-
 <script>
     // function loadContent(){
     //     var url = "https://jsonplaceholder.typicode.com/posts/";
