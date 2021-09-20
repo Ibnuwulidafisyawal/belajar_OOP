@@ -104,12 +104,9 @@ echo $produk1->getHarga();
 echo  "<br>";
 echo "Harga " ,"Diskon ", $produk2->judul , $produk2->setDiskon(50);
 echo $produk2->getHarga();
-
-
+echo "<br>";
 // $infoProduk1 = new cetakInfoProduk();
 // echo $infoProduk1->cetak($produk1);
-
-
 ?>
 
 
