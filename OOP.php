@@ -97,7 +97,6 @@ echo "<br>";
 echo $produk2->getInfoProduk();
 echo "<br>";
 echo "<hr>";
-
 //tampilkan diskon 
 echo "Harga " ,"Diskon ", $produk1->judul , $produk1->setDiskon(50);
 echo $produk1->getHarga();
