@@ -30,6 +30,4 @@ echo $obj2->welcome();
 
 
 //jadi static memudahkan dan lebih hemat code
-
-
 ?>

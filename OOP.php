@@ -153,6 +153,7 @@ echo "<hr>";
 echo "ini setter untuk mengganti nama judul dari produk tanpa mengubah nama property dari produk ";
 echo $produk1->setJudul("<b>Saya Maung</b>");
 
+
 //getter untuk menampilkan property judul dari property private
 echo $produk1->getJudul();
 
