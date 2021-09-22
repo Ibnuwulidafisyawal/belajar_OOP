@@ -84,6 +84,7 @@ class produk {
             }
 }
 
+
 //extends adalah untuk memanggil class induk 
 class komik extends produk{
     public $jmlhlmn;
