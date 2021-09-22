@@ -58,7 +58,6 @@ class kalkulator
     echo '</form>';
   }
 }
-
 $data = new kalkulator();
 $data->form();
 
@@ -79,4 +78,6 @@ if ($_POST) {
             echo "Hasil Dari ".$xa." / ".$ya." = ".$data->Bagi($xa, $ya)."";
         }
 }
+
+
 ?>

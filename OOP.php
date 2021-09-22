@@ -66,12 +66,7 @@ class produk {
             public function getDiskon(){
                 return $this->diskon;
             }
-    
             
-        
-         
-          
-
             public function getLabel(){
                 return "$this->penulis, $this->penerbit";
                 
@@ -92,7 +87,6 @@ class produk {
 //extends adalah untuk memanggil class induk 
 class komik extends produk{
     public $jmlhlmn;
-    
 
         public function __construct($judul = "judul", $penulis= "penulis", $penerbit= "penerbit", $harga=0 , $jmlhlmn = 0){
             // parent untuk mengambil dari class produk 
@@ -141,6 +135,7 @@ echo "<br>";
 echo $produk2->getInfoProduk();
 echo "<br>";
 echo "<hr>";
+
 
 //tampilkan diskon 
 echo "Harga " ,"Diskon ", $produk1->getJudul() , $produk1->setDiskon(30);

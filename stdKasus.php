@@ -55,8 +55,6 @@ class siswa{
         return $this->alamat = "Bogor<br>";
     }
 }
-
 $siswa = new siswa();
 echo $siswa->namaSiswa().$siswa->nis().$siswa->rombel().$siswa->alamat();
 ?>
-

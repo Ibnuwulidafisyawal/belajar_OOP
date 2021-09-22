@@ -46,6 +46,7 @@ class Mobil {
     }
 }
 
+
 echo Mobil::getspeed();
 echo "<br>";
 echo Mobil::$speed; 
