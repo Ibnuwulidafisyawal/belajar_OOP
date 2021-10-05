@@ -4,12 +4,16 @@
 echo "<h2>Project Produk </h2>";
 echo "<hr>";
 
-class produk {
+interface infoProduk{
+    //get info produk untuk menampilkan dari class komik dan game
+     public  function getInfoProduk();
+}
+abstract class produk {
     private $judul,
             $penulis,
             $penerbit,
             $harga,
-            $diskon = 0;
+            $diskon = 0; 
            
 
         public function __construct( $judul = "judul", $penulis= "penulis", $penerbit= "penerbit", $harga=0) { 
@@ -71,16 +75,16 @@ class produk {
                 return "$this->penulis, $this->penerbit";
                 
             }
-            //get info produk untuk menampilkan dari class komik dan game
-            public  function getInfoProduk()
-            {
-            $str = "{$this->judul} | {$this->getlabel()} (RP. {$this->harga})";
+            
+          
+            public function getInfo(){
+                $str = "{$this->judul} | {$this->getlabel()} (RP. {$this->harga})";
                 // if ($this->tipe == "Komik") {
                 //    $str .= " - {$this->jmlhlmn} Halaman.";
                 // }else if($this->tipe == "Game"){
                 //     $str .= " - {$this->jam} Jam.";
                 // }
-            return $str;
+                return $str;
             }
 }
 
@@ -96,7 +100,7 @@ class komik extends produk{
         }
         
         public function getInfoProduk(){     
-            $str = "Komik : " . parent::getInfoProduk() . " - {$this->jmlhlmn} Halaman.";
+            $str = "Komik : " . $this->getInfo() . " - {$this->jmlhlmn} Halaman.";
 
             return $str;
             
@@ -114,36 +118,41 @@ class game extends produk{
 
         
         public function getInfoProduk() {
-            $str = "Game : " . parent::getInfoProduk() . " - {$this->jam} Jam.";
+            $str = "Game : " . $this->getInfo() . " - {$this->jam} Jam.";
                 
                 return $str;
             } 
         }
 
+
 class cetakInfoProduk{
-    public function cetak(produk $produk)
-    {
-        $str = "{$produk->judul} | {$produk->getLabel()} |  RP. $produk->harga ";
+
+    public  $daftarProduk = array();
+
+    public function tambahProduk(produk $produk)   {
+        $this->daftarProduk[] = $produk;
+        // $str = "{$produk->judul} | {$produk->getLabel()} |  RP. $produk->harga ";
+  
+    }
+
+    public function cetak()    {
+        $str = "DAFTAR PRODUK : <br>";
+
+        foreach( $this->daftarProduk as $p){
+            $str .= "- {$p->getInfoProduk()} <br>";
+        }
         return $str;
     }
+
 }
 
 $produk1 = new komik ("Titan ", "Agung ", "Sunan ",45000,100 ,"Komik ");
-$produk2 = new game ("Resident Evil ", "Saya ", "Aku ",45000,50 ,"Game ");
+$produk2 = new game ("Resident Evil ", "Saya ", "wulid ",45000,50 ,"Game ");
 
-echo $produk1->getInfoProduk();
-echo "<br>";
-echo $produk2->getInfoProduk();
-echo "<br>";
-echo "<hr>";
-
-
-//tampilkan diskon 
-echo "Harga " ,"Diskon ", $produk1->getJudul() , $produk1->setDiskon(30);
-echo $produk1->getHarga();
-echo  "<br>";
-echo "Harga " ,"Diskon ", $produk2->getJudul() , $produk2->setDiskon(50);
-echo $produk2->getHarga();
+$cetakProduk= new cetakInfoProduk();
+$cetakProduk->tambahProduk($produk1);
+$cetakProduk->tambahProduk($produk2);
+echo $cetakProduk->cetak();
 echo "<hr>";
 
 echo "ini setter untuk mengganti nama judul dari produk tanpa mengubah nama property dari produk ";
@@ -154,8 +163,6 @@ echo $produk1->setJudul("<b>Saya Maung</b>");
 echo $produk1->getJudul();
 
 
-// $infoProduk1 = new cetakInfoProduk();
-// echo $infoProduk1->cetak($produk1);
 ?>
 
 
