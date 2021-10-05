@@ -16,8 +16,6 @@ class contohStatic{
 
 }
 
-
-
 $obj1= new contohStatic();
 echo $obj1->welcome();
 echo $obj1->welcome();
@@ -33,6 +31,8 @@ echo "<hr>";
 
 
 
+
+
 //contoh static ke 2
 class Mobil {
     public static $speed  = 200;
@@ -45,6 +45,7 @@ class Mobil {
         return 400;
     }
 }
+
 
 echo Mobil::getspeed();
 echo "<br>";

@@ -57,5 +57,4 @@ class siswa{
 }
 $siswa = new siswa();
 echo $siswa->namaSiswa().$siswa->nis().$siswa->rombel().$siswa->alamat();
-
 ?>

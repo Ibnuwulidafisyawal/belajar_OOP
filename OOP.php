@@ -4,12 +4,15 @@
 echo "<h2>Project Produk </h2>";
 echo "<hr>";
 
+
+
 interface infoProduk{
     //get info produk untuk menampilkan dari class komik dan game
      public  function getInfoProduk();
 }
+
 abstract class produk {
-    private $judul,
+    protected $judul,
             $penulis,
             $penerbit,
             $harga,
@@ -76,21 +79,13 @@ abstract class produk {
                 
             }
             
+          abstract function getInfo();
           
-            public function getInfo(){
-                $str = "{$this->judul} | {$this->getlabel()} (RP. {$this->harga})";
-                // if ($this->tipe == "Komik") {
-                //    $str .= " - {$this->jmlhlmn} Halaman.";
-                // }else if($this->tipe == "Game"){
-                //     $str .= " - {$this->jam} Jam.";
-                // }
-                return $str;
-            }
 }
 
 
 //extends adalah untuk memanggil class induk 
-class komik extends produk{
+class komik extends produk implements infoProduk{
     public $jmlhlmn;
 
         public function __construct($judul = "judul", $penulis= "penulis", $penerbit= "penerbit", $harga=0 , $jmlhlmn = 0){
@@ -105,15 +100,24 @@ class komik extends produk{
             return $str;
             
         }
+        public function getInfo(){
+            $str = "{$this->judul} | {$this->getlabel()} (RP. {$this->harga})";
+            return $str;
+        }
 }
 
-class game extends produk{
+class game extends produk implements infoProduk{
     public $jam;
 
     public function __construct($judul = "judul", $penulis= "penulis", $penerbit= "penerbit", $harga=0 , $jam = 0){
 
         parent::__construct($judul,$penulis,$penerbit,$harga,$jam);
             $this->jam = $jam;
+    }
+
+    public function getInfo(){
+        $str = "{$this->judul} | {$this->getlabel()} (RP. {$this->harga})";
+        return $str;
     }
 
         
@@ -157,8 +161,6 @@ echo "<hr>";
 
 echo "ini setter untuk mengganti nama judul dari produk tanpa mengubah nama property dari produk ";
 echo $produk1->setJudul("<b>Saya Maung</b>");
-
-
 //getter untuk menampilkan property judul dari property private
 echo $produk1->getJudul();
 

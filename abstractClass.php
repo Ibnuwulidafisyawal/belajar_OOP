@@ -72,4 +72,6 @@ class apple extends Buah{
 $apple = new apple();
 $apple->getInfoApple();
 
+
+
 ?>

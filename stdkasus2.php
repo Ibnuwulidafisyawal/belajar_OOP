@@ -1,37 +1,6 @@
 <?php 
 
-// class mobil{
 
-//     var $nama;
-//     var $merk;
-//     var $warna;
-//     var $kecepatanMaksimal;
-     
-    
-//     function nama(){
-//         return $this->nama = "Mercedes Benz C100<br>";
-//     }
-
-//     function merk(){
-//         return $this->merk = "Mercedes Benz<br>";
-//     }
-          
-//     function warna(){
-//         return $this->warna = "Silver<br>";
-//     }
-//     function kecepatan(){
-//         return $this->kecepatanMaksimal = "300 km<br>";
-//     }
-// }
-
-// $mobil = new mobil();
-// echo $mobil->nama().$mobil->merk().$mobil->warna().$mobil->kecepatan();
-
-// echo "<hr>";
-
-// Ibnu Wulida Fisyawal
-// RPL XI-2
-// 12007825
 class mobilAkuDanDia{
 
     var $nama;
@@ -91,9 +60,4 @@ echo $mobilAku->namaMobilDia().
      $mobilAku->warnaMobilDia().
      $mobilAku->kecepatanMobilDia();
 
-
-
-
-
-    
 ?>
