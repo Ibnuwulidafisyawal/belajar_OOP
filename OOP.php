@@ -5,7 +5,8 @@ echo "<h2>Project Produk </h2>";
 echo "<hr>";
 
 
-
+//Interface adalah sebuah abstrak kelas yang sama sekali tidak memiliki implementasi,
+// dimana nantinya membuat perjanjian dengan class yang mengimplementasikan interface tersebut.
 interface infoProduk{
     //get info produk untuk menampilkan dari class komik dan game
      public  function getInfoProduk();
