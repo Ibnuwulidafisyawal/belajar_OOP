@@ -1,6 +1,10 @@
 <?php 
 
 //belajar OOP PHP
+
+use app\produk\user as ProdukUser;
+use app\service_admin\user;
+
 echo "<h2>Project Produk </h2>";
 echo "<hr>";
 
@@ -178,13 +182,18 @@ $produk1 = new komik ("Titan ", "Agung ", "Sunan ",45000,100 ,"Komik ");
 $produk2 = new game ("Resident Evil ", "Saya ", "wulid ",45000,50 ,"Game ");
 $produk3 = new manga ("boruto ", "ibnu ", "syawal ",100000,560 ,"Manga ");
 
+
 $cetakProduk= new cetakInfoProduk();
 $cetakProduk->tambahProduk($produk1);
 $cetakProduk->tambahProduk($produk2);
 $cetakProduk->tambahProduk($produk3);
 echo $cetakProduk->cetak();
 echo "<hr>";
+echo "<br>";
 
+new \app\produk\user; 
+echo "<br>";  
+new \app\service_admin\user;
 // echo "ini setter untuk mengganti nama judul dari produk tanpa mengubah nama property dari produk ";
 // echo $produk1->setJudul("<b>Saya Maung</b>");
 // //getter untuk menampilkan property judul dari property private
