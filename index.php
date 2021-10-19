@@ -191,7 +191,7 @@ echo $cetakProduk->cetak();
 echo "<hr>";
 echo "<br>";
 
-new \app\produk\user; 
+$user = new \app\produk\user; 
 echo "<br>";  
 new \app\service_admin\user;
 // echo "ini setter untuk mengganti nama judul dari produk tanpa mengubah nama property dari produk ";
